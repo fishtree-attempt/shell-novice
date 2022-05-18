@@ -1,22 +1,23 @@
 ---
-title: "Introducing the Shell"
+title: Introducing the Shell
 teaching: 5
 exercises: 0
-questions:
-- "What is a command shell and why would I use one?"
-objectives:
-- "Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs."
-- "Explain when and why command-line interfaces should be used instead of graphical interfaces."
-keypoints:
-- "A shell is a program whose primary purpose is to read commands and run other programs."
--  "This lesson uses Bash, the default shell in many implementations of Unix."
--  "Programs can be run in Bash by entering commands at the command-line prompt."
-- "The shell's main advantages are its high action-to-keystroke ratio, its support for
-automating repetitive tasks, and its capacity to access networked machines."
-- "The shell's main disadvantages are its primarily textual nature and how
-cryptic its commands and operation can be."
 ---
+
 ### Background
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs.
+- Explain when and why command-line interfaces should be used instead of graphical interfaces.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- What is a command shell and why would I use one?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Humans and computers commonly interact in many different ways, such as through a keyboard and mouse,
 touch screen interfaces, or using speech recognition systems.
@@ -38,9 +39,7 @@ With the proper commands, the shell can repeat tasks with or without some modifi
 as many times as we want.
 Using the shell, the task in the literature example can be accomplished in seconds.
 
-
 ### The Shell
-
 
 The shell is a program where users can type commands.
 With the shell, it's possible to invoke complicated programs like climate modeling software
@@ -75,10 +74,9 @@ Let's get started.
 When the shell is first opened, you are presented with a **prompt**,
 indicating that the shell is waiting for input.
 
-~~~
+```bash
 $
-~~~
-{: .language-bash}
+```
 
 The shell typically uses `$ ` as the prompt, but may use a different symbol.
 In the examples for this lesson, we'll show the prompt as `$ `.
@@ -95,34 +93,35 @@ You may have seen it in a text editor program, for example.
 So let's try our first command, `ls` which is short for listing.
 This command will list the contents of the current directory:
 
-~~~
+```bash
 $ ls
-~~~
-{: .language-bash}
+```
 
-~~~
+```output
 Desktop     Downloads   Movies      Pictures
 Documents   Library     Music       Public
-~~~
-{: .output}
+```
 
-> ## Command not found
-> If the shell can't find a program whose name is the command you typed, it
-> will print an error message such as:
->
-> ~~~
-> $ ks
-> ~~~
-> {: .language-bash}
-> ~~~
-> ks: command not found
-> ~~~
-> {: .output}
->
-> This might happen if the command was mis-typed or if the program corresponding to that command
-> is not installed.
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
 
+## Command not found
+
+If the shell can't find a program whose name is the command you typed, it
+will print an error message such as:
+
+```bash
+$ ks
+```
+
+```output
+ks: command not found
+```
+
+This might happen if the command was mis-typed or if the program corresponding to that command
+is not installed.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Nelle's Pipeline: A Typical Problem
 
@@ -155,6 +154,7 @@ once she has put a processing pipeline together,
 she will be able to use it again whenever she collects more data.
 
 In order to achieve her task, Nelle needs to know how to:
+
 - navigate to a file/directory
 - create a file/directory
 - check the length of a file
@@ -163,4 +163,16 @@ In order to achieve her task, Nelle needs to know how to:
 - iterate over files
 - run a shell script containing her pipeline
 
-{% include links.md %}
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- A shell is a program whose primary purpose is to read commands and run other programs.
+- This lesson uses Bash, the default shell in many implementations of Unix.
+- Programs can be run in Bash by entering commands at the command-line prompt.
+- The shell's main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines.
+- The shell's main disadvantages are its primarily textual nature and how cryptic its commands and operation can be.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
